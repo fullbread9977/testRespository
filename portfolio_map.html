@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=c3e8dc5f5e0ac4e17e2c0160455aa2aa&libraries=services"></script>
+    <title>고궁 지도</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/Reset.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/portfolio.css">
+
+</head>
+<body>
+    <div class="title_box">
+        <div><a href="portfolio.html">고궁을 거닐다</a> </div> 
+    </div>
+    <div class="menu_box">
+        <ul class="menu">
+            <li><a href="portfolio_trable.html">여행장소</a></li>
+            <li><a href="portfolio_event.html">행사</a></li>
+            <li><a href="portfolio_map.html">여행지도</a></li>
+        </ul>
+    </div>
+    <div id="map" style="width:500px;height:400px;"></div>
+	
+	<script>
+		var container = document.getElementById('map');
+		var options = {
+			center: new kakao.maps.LatLng(33.450701, 126.570667),
+			level: 3
+		};
+
+		var map = new kakao.maps.Map(container, options);
+	</script>
+</body>
+</html>
